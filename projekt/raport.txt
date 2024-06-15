@@ -1,0 +1,31 @@
+Model nauczony na 23 klasach (rodzajach zwierząt) - łacznie 50 000 zdjęć i 3,5GB.
+Zbiór danych podzielony na zestawy train, val, test w proporcji 80% do 10% do 10%.
+
+Po nauczeniu modelu wyniki na zbiorze testowym(5 000 zdjęć) były następujące:
+Loss: 0.754960834980011, Accuracy: 0.7788299918174744
+
+Stworzony przeze mnie model wykorzystuje kilka warst Conv2D, po których następują BatchNormalization oraz
+MaxPooling2D, pomagają one w odpowiednio: normalizacji wartości aktywacji oraz redukcji wymiarów danych wejściowych.
+Przed warstwą wyjściową stosuję Dropout(0.5), który ,,porzuca" połowę neuronów w celu zapobiegania overfittingu.
+
+Jako optimizer używam Adam, a jako loss - crossentropy.
+
+Zestaw treningowy przechodzi przez augmentację czyli sztuczne dodanie nowych instacji danych, za pomocą przesunięć,
+obrotów, przybliżeń itd. posiadanych danych - pozwala to na zwiększenie ilości danych o podobne, lecz różne sztuczne dane
+
+Dane pobrane z:
+https://images.cv/dataset/animal-image-classification-dataset
+https://www.kaggle.com/datasets/iamsouravbanerjee/animal-image-dataset-90-different-animals
+https://www.kaggle.com/datasets/alessiocorrado99/animals10,
+gdzie sam wybrałem potrzebne foldery, usunąłem zbyt małe zbiory (typu zwierzę z 150 zdjęciami), żeby nie tworzyły szumu
+dla modelu.
+
+Wynik 0.78 accuracy jest zadowalający jak na taki zbiór danych. Model dobrze radzi sobie z nowymi zdjęciami.
+Model uczył się około 7 godzin - niestety tensorflow używa technologii CUDA od NVidii i karty graficzne AMD nie są
+wspierane, co mogłoby znacznie skrócić ten czas.
+
+Możliwe ulepszenia:
+- zwiększenie ilości wartsw w modelu,
+- dodanie dodatkowej regularyzacji,
+- zwiekszenie ilości danych,
+- kupienie karty graficznej od NVidii.

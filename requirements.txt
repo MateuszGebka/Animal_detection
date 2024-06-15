@@ -1,0 +1,11 @@
+# Update pip
+python -m pip install -U pip
+
+# Install scikit-image
+python -m pip install -U scikit-image
+
+# Install tensorflow
+pip install tensorflow
+
+# Install NumPy
+pip install numpy
