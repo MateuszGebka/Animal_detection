@@ -78,7 +78,7 @@ history - trening.
 zapisanie modelu do pliku.
 
 Przykład trenowania modelu:
-![img.png](assets\img.png)
+![img.png](assets/img.png)
 
 
 ## Ocena
@@ -90,7 +90,7 @@ jak treningowe (rozmiar i ilość) i wykonujemy funkcję
 evaluate, która zwraca accuracy i loss naszego modelu.
 
 Przykład oceny na zbiorze testowym
-![img_2.png](assets\img_2.png)
+![img_2.png](assets/img_2.png)
 
 ## Predykcja
 
@@ -107,11 +107,11 @@ nasze zdjęcia i program pokaże najbardziej prawdopodobne
 wyniki.
 
 Przykład klasyfikacji nowego zdjęcia w Gradio:
-![img_4.png](assets\img_4.png)
-![img_5.png](assets\img_5.png)
+![img_4.png](assets/img_4.png)
+![img_5.png](assets/img_5.png)
 
 Przykład klasyfikacji nowego zdjęcia w noteboku:
-![img_3.png](assets\img_3.png)
+![img_3.png](assets/img_3.png)
 
 ## Gotowy model
 
